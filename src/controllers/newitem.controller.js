@@ -5,7 +5,7 @@ const authenticate = require("../middleware/auth");
 router.post("/", authenticate, async (req, res) => {
   try {
     const user = req.user;
-    console.log(req.body)
+    console.log(req.body);
     const newitem = await User.create({
       title: req.body.title,
       body: req.body.body,
